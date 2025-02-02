@@ -30,3 +30,11 @@ services:
 volumes:
   postgres-data:
   pgadmin-data:
+
+
+
+
+# If you did the setup using Option 2 which is Docker option, and the tables are not in the database, another solution is to:
+# Find the container id by running docker ps - under CONTAINER ID
+# Go inside the container by executing docker exec -it <container_name_or_id> bash
+# Run pg_restore -U $POSTGRES_USER -d $POSTGRES_DB /docker-entrypoint-initdb.d/data.dump
