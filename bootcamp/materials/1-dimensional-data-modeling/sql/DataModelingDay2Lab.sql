@@ -249,6 +249,7 @@ SELECT *, 2022 AS current_season FROM (
                   SELECT *
                   FROM new_records
               ) a
+order by player_name, start_season
 
 
 
